@@ -2,6 +2,8 @@
 
 react-hook-theme allows you to switch between dark / light mode in your React application with ease.
 
+![Toggle](/assets/toggle.gif)
+
 ## Features
 
 -   ThemeProvider component to wrap your application and provide the theme context to your components.
