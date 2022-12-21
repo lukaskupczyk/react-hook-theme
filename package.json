@@ -1,0 +1,52 @@
+{
+    "name": "react-hook-theme",
+    "version": "1.0.0",
+    "description": "A react library for handling dark/light mode",
+    "scripts": {
+        "build": "node esbuild.config.mjs",
+        "postbuild": "tsc --emitDeclarationOnly --declaration"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "repository": "git@github.com:lukaskupczyk/react-hook-theme.git",
+    "author": "Lukas Kupczyk <lukas@kupczyk.net>",
+    "license": "MIT",
+    "homepage": "https://github.com/lukaskupczyk/react-hook-theme",
+    "keywords": [
+        "react",
+        "darkmode",
+        "theme",
+        "nextjs",
+        "scss",
+        "css",
+        "react-hooks",
+        "hooks"
+    ],
+    "devDependencies": {
+        "@types/react": "^18.0.26",
+        "@types/react-dom": "^18.0.9",
+        "@typescript-eslint/eslint-plugin": "^5.47.0",
+        "@typescript-eslint/parser": "^5.47.0",
+        "esbuild": "^0.16.10",
+        "esbuild-plugin-sass": "^1.0.1",
+        "esbuild-sass-plugin": "^2.4.4",
+        "eslint": "^8.30.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-react": "^7.31.11",
+        "prettier": "^2.8.1",
+        "stylelint": "^14.16.0",
+        "stylelint-config-prettier": "^9.0.4",
+        "stylelint-config-property-sort-order-smacss": "^9.0.0",
+        "stylelint-config-standard-scss": "^6.1.0",
+        "typescript": "^4.9.4"
+    },
+    "peerDependencies": {
+        "react": ">=16.8.0",
+        "react-dom": ">=16.8.0"
+    },
+    "files": [
+        "/dist"
+    ],
+    "dependencies": {}
+}

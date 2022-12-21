@@ -1,0 +1,76 @@
+@use 'sass:math';
+
+// colors
+:root {
+    --theme-toggle-background: #1e1e1e;
+    --theme-toggle-sun: #ffd700;
+    --theme-toggle-moon: #fff;
+    --theme-toggle-ball: #fff;
+}
+
+// utils
+@function px($value) {
+    @if unit($value) != '' {
+        @error "value is required to be unit-less";
+    }
+
+    @return math.div($value, 16) * 1rem;
+}
+
+// styling
+.rht-sun {
+    transition: 0.3s;
+    opacity: 1;
+    color: var(--theme-toggle-sun);
+}
+
+.rht-moon {
+    transform: translateX(px(43)) rotate(250deg);
+    transition: 0.3s;
+    opacity: 0;
+    color: var(--theme-toggle-moon);
+}
+
+.rht-ball {
+    display: block;
+    position: absolute;
+    top: px(5);
+    left: px(5);
+    width: px(25);
+    height: px(25);
+    transition: 0.3s;
+    border-radius: 50%;
+    background: var(--theme-toggle-ball);
+}
+
+.rht-switch {
+    display: none;
+
+    &:checked + label .rht-sun {
+        transform: translateX(px(-38)) rotate(160deg);
+        opacity: 0;
+    }
+
+    &:checked + label .rht-moon {
+        transform: translateX(px(0)) rotate(0);
+        opacity: 1;
+    }
+
+    &:checked + label .rht-ball {
+        transform: translateX(px(38));
+    }
+}
+
+.rht-label {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    width: px(74);
+    height: px(35);
+    padding: 0 px(6);
+    border-radius: px(18);
+    background: var(--theme-toggle-background);
+    cursor: pointer;
+}
