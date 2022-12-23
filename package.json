@@ -5,7 +5,9 @@
     "scripts": {
         "build": "node esbuild.config.mjs",
         "postbuild": "tsc --emitDeclarationOnly --declaration",
-        "test": "jest"
+        "test": "jest",
+        "test:dev": "jest --watch",
+        "coverage": "jest --coverage --collectCoverageFrom=\"./src/**\""
     },
     "main": "./dist/index.js",
     "module": "./dist/index.js",
