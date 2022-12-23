@@ -32,6 +32,10 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+        # run tests
+      - name: Run tests
+        run: yarn test
+
       # build dist
       - name: Build package
         run: yarn build
