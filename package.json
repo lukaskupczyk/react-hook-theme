@@ -1,6 +1,6 @@
 {
     "name": "react-hook-theme",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A react library for handling dark/light mode",
     "scripts": {
         "build": "node esbuild.config.mjs",
