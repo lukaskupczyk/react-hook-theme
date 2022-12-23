@@ -1,8 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { Toggle } from 'react-hook-theme';
-import 'react-hook-theme/dist/index.css';
+import 'react-hook-theme/dist/styles/style.css';
+import './App.css';
+import logo from './logo.svg';
 
 function App() {
     return (

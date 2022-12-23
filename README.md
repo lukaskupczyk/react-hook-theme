@@ -49,7 +49,7 @@ import { ThemeProvider } from 'react-hook-theme';
 // ...
 ```
 
-### Styling
+### Styling of Dark / Light Mode
 
 Adjust styling by working with css variables
 
@@ -91,6 +91,9 @@ Optionally use the toggle
  */
 
 import { Toggle } from 'react-hook-theme';
+
+// styling
+import 'react-hook-theme/dist/styles/style.css';
 
 // ...
 <header>
