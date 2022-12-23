@@ -1,6 +1,6 @@
 # react-hook-theme
 
-react-hook-theme allows you to switch between dark / light mode in your React application with ease.
+Switch between dark and light mode in your React application with ease.
 
 ![Toggle](/assets/toggle.gif)
 
@@ -20,7 +20,7 @@ A working example is provided in the `example` folder.
 ```bash
 yarn add react-hook-theme
 
-#or
+# or
 
 npm install react-hook-theme
 ```
