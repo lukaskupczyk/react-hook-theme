@@ -13,6 +13,7 @@ export function Toggle() {
                 id="switch"
                 className="rht-switch"
                 type="checkbox"
+                role="switch"
                 onChange={handleChange}
                 checked={theme === 'dark'}
             />
