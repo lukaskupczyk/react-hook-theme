@@ -7,9 +7,9 @@ export function storeTheme(theme: Theme) {
 }
 
 export function getStoredTheme() {
-    if (typeof window === 'undefined') {
-        return null;
+    if (typeof window !== 'undefined') {
+        return localStorage.getItem('rht-theme') as Theme;
     }
 
-    return localStorage.getItem('rht-theme') as Theme;
+    return null;
 }
