@@ -37,7 +37,7 @@ describe('<ThemeProvider />', () => {
     test('expect theme to be dark', async () => {
         // ARRANGE
         render(
-            <ThemeProvider options={{ theme: 'dark' }}>
+            <ThemeProvider options={{ theme: 'dark', save: true }}>
                 <TestingComponent />
             </ThemeProvider>
         );

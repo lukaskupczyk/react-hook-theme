@@ -3,7 +3,8 @@ import React from 'react';
 export type Theme = 'dark' | 'light';
 
 export type ThemeOptions = {
-    theme: Theme;
+    theme?: Theme;
+    save?: boolean;
 };
 
 type ThemeContext = {
@@ -16,5 +17,5 @@ export const ThemeContext = React.createContext<ThemeContext>({
     theme: 'dark',
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     setTheme: () => {},
-    options: { theme: 'dark' },
+    options: { theme: 'dark', save: true },
 });
