@@ -2,7 +2,11 @@ import { useTheme } from './useTheme';
 
 type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
-export function Toggle() {
+type ToggleProps = {
+    id?: string;
+};
+
+export function Toggle({ id = 'rth-toggle' }: ToggleProps) {
     const { theme, setTheme } = useTheme();
 
     const handleChange = (e: ChangeEvent) => setTheme(e.target.checked ? 'dark' : 'light');
@@ -10,7 +14,7 @@ export function Toggle() {
     return (
         <div className="rht-toggle">
             <input
-                id="switch"
+                id={id}
                 className="rht-switch"
                 type="checkbox"
                 role="switch"
@@ -18,7 +22,7 @@ export function Toggle() {
                 checked={theme === 'dark'}
             />
 
-            <label className="rht-label" htmlFor="switch">
+            <label className="rht-label" htmlFor={id}>
                 <svg
                     className="rht-moon"
                     xmlns="http://www.w3.org/2000/svg"
