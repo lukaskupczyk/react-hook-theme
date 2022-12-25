@@ -11,6 +11,7 @@ Switch between dark and light mode in your React application with ease.
 -   Optional toggle to switch between dark and light mode
 -   Automatic detection of users' browser settings
 -   Optionally persists the selected theme to local storage
+-   Ready for Next.js
 
 ## Example
 
