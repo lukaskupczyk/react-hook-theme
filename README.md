@@ -83,7 +83,7 @@ body {
 
 ### Toggle
 
-Optionally use the toggle
+Optionally use the toggle component to render a switch to change between dark/ light mode.
 
 ```typescript
 /*
@@ -101,6 +101,12 @@ import 'react-hook-theme/dist/styles/style.css';
 </header>;
 ```
 
+#### Props
+
+| Name | Type   | Required | Description                           | Default    |
+| ---- | ------ | -------- | ------------------------------------- | ---------- |
+| id   | string |          | Sets the html id of the input element | rht-toggle |
+
 ### Hooks
 
 Use the provided `useTheme` hook to access or update the current theme
@@ -115,3 +121,11 @@ import { useTheme } from 'react-hook-theme';
 // ...
 const { theme, setTheme } = useTheme();
 ```
+
+#### Return
+
+| Object Name | Type                   | Description              |
+| ----------- | ---------------------- | ------------------------ |
+| theme       | Theme                  | The current theme        |
+| setTheme    | (theme: Theme) => void | Update the current theme |
+| options     | ThemeOptions           | Configuration of hook    |
