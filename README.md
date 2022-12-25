@@ -6,11 +6,11 @@ Switch between dark and light mode in your React application with ease.
 
 ## Features
 
--   Provides the theme context to components.
--   Hook to retrieve and change the current theme.
--   Toggle to switch between dark and light mode.
--   Automatic detection of users' browser settings.
--   Persists the selected theme to local storage.
+-   Provides the theme context to components
+-   Hook to retrieve and change the current theme
+-   Optional toggle to switch between dark and light mode
+-   Automatic detection of users' browser settings
+-   Optionally persists the selected theme to local storage
 
 ## Example
 
@@ -30,7 +30,7 @@ npm install react-hook-theme
 
 ### Provider
 
-Wrap the application in the `ThemeProvider`.
+Wrap the application in the `ThemeProvider`. Optionally provide settings via the `options` prop.
 
 ```typescript
 /*
@@ -51,7 +51,7 @@ import { ThemeProvider } from 'react-hook-theme';
 // ...
 ```
 
-#### Props
+#### Options Prop
 
 | Name  | Type    | Required | Description                              | Default |
 | ----- | ------- | -------- | ---------------------------------------- | ------- |

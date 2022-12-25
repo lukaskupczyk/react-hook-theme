@@ -6,13 +6,13 @@ import { getPreferredTheme } from './preferred-theme';
 const fallbackTheme = 'dark';
 
 type ThemeProviderProps = {
-    options: ThemeOptions;
+    options?: ThemeOptions;
     children: React.ReactNode;
 };
 
-export function ThemeProvider({ options, children }: ThemeProviderProps) {
+export function ThemeProvider({ options = {}, children }: ThemeProviderProps) {
     const [theme, setTheme] = useState<Theme>(
-        getStoredTheme() || getPreferredTheme() || options.theme || fallbackTheme
+        getStoredTheme() || getPreferredTheme() || options?.theme || fallbackTheme
     );
 
     useEffect(() => {
@@ -20,7 +20,7 @@ export function ThemeProvider({ options, children }: ThemeProviderProps) {
     }, [theme]);
 
     const handleThemeChange = useCallback((theme: Theme) => {
-        if (options.save) {
+        if (options?.save) {
             storeTheme(theme);
         }
 
