@@ -11,9 +11,12 @@ type ThemeProviderProps = {
 };
 
 export function ThemeProvider({ options = {}, children }: ThemeProviderProps) {
-    const [theme, setTheme] = useState<Theme>(
-        getStoredTheme() || getPreferredTheme() || options?.theme || fallbackTheme
-    );
+    const [theme, setTheme] = useState<Theme>(fallbackTheme);
+
+    useEffect(() => {
+        const theme = getStoredTheme() || getPreferredTheme() || options?.theme;
+        setTheme(theme);
+    }, []);
 
     useEffect(() => {
         document.body.setAttribute('data-theme', theme);
