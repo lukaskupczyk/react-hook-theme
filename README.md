@@ -6,10 +6,11 @@ Switch between dark and light mode in your React application with ease.
 
 ## Features
 
--   ThemeProvider component to wrap the application and provide the theme context to components
--   useTheme hook to access and change the current theme
--   Toggle component to switch between dark and light mode
--   Automatic detection of users browser settings
+-   Provides the theme context to components.
+-   Hook to retrieve and change the current theme.
+-   Toggle to switch between dark and light mode.
+-   Automatic detection of users' browser settings.
+-   Persists the selected theme to local storage.
 
 ## Example
 
@@ -42,6 +43,7 @@ import { ThemeProvider } from 'react-hook-theme';
 <ThemeProvider
     options={{
         theme: 'dark',
+        save: true,
     }}
 >
     <App />
@@ -49,9 +51,16 @@ import { ThemeProvider } from 'react-hook-theme';
 // ...
 ```
 
+#### Props
+
+| Name  | Type    | Required | Description                              | Default |
+| ----- | ------- | -------- | ---------------------------------------- | ------- |
+| theme | Theme   |          | The default theme as a fallback          | dark    |
+| save  | boolean |          | Save theme to local storage when changed | false   |
+
 ### Styling of Dark / Light Mode
 
-Adjust styling by working with css variables
+Adjust the styling of your app by utilizing css variables:
 
 ```css
 /*
@@ -83,7 +92,7 @@ body {
 
 ### Toggle
 
-Optionally use the toggle component to render a switch to change between dark/ light mode.
+Optionally use the toggle component to render a switch to change between dark and light mode.
 
 ```typescript
 /*

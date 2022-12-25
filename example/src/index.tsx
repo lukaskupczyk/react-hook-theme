@@ -11,6 +11,7 @@ root.render(
         <ThemeProvider
             options={{
                 theme: 'dark',
+                save: true,
             }}
         >
             <App />

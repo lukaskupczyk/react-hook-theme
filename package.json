@@ -1,7 +1,7 @@
 {
     "name": "react-hook-theme",
-    "version": "1.1.0",
-    "description": "A react library for handling dark/light mode",
+    "version": "1.2.0",
+    "description": "Switch between dark and light mode in your React application with ease.",
     "scripts": {
         "build": "node esbuild.config.mjs",
         "postbuild": "tsc --emitDeclarationOnly --declaration",
