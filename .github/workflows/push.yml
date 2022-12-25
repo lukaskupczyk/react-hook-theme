@@ -2,9 +2,9 @@
 
 name: push
 on:
-  # trigger on feature/* branch
+  # trigger on feature/* or bug/* branch
   push:
-    branches: [feature/*]
+    branches: [feature/*, bug/*]
 
   # allow manual dispatch
   workflow_dispatch:
