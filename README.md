@@ -83,7 +83,7 @@ body {
 
 ### Toggle
 
-Optionally use the toggle
+Optionally use the toggle component to render a switch to change between dark/ light mode.
 
 ```typescript
 /*
