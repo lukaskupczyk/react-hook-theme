@@ -15,7 +15,9 @@ Switch between dark and light mode in your React application with ease.
 
 ## Example
 
-A working example is provided in the `example` folder.
+Check out the [CodeSandbox](https://codesandbox.io/s/example-react18-i73swh) for a working example.
+
+Another example is also included in the `example` folder of the repository.
 
 ## Installation
 
